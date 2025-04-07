@@ -3,19 +3,308 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* --background: #eee5da; */
+  --background: #efdfbb;
+  --foreground: #262424;
+  --theme-accent: #722f37;
+  --theme-yellow: #Fdbe02;
+  --theme-black: #000;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #262424;
+    --foreground: #F5F0E9;
+    /* --gray1:'#F5F0E9';
+    --gray2:'#FAF7F3'; */
+    /* --gray1:'#eee5da';
+    --gray2:'#FAF7F3'; */
+  }
+}
+/* .cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 50;
+}
+
+.cursor-light {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 100, 0.3);
+  position: fixed;
+  top: 0;
+  left:0;
+  border-radius: 50%;
+  filter: blur(15px);
+  pointer-events: none;
+  transform: translate(-25px, -25px);
+  transition: transform 0.3s ease-out;
+  z-index: 49;
+} */
+/* .container{
+  padding-left: 2rem;
+  padding-right: 2rem;
+  max-width: unset;
+} */
+ *{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border-color: #eee5da;
+  color: var(--foreground);
+ }
+body {
+  background: var(--background);
+  font-family: var(--font-poppins), sans-serif;
+}
+h1,h2{
+  font-family: var(--font-bebas);
+  /* color: #efdfbb; */
+}
+nav{
+  /* color:#efdfbb; */
+}
+/* h3,h4,h5,h6,p{
+  color: var(--gray1) !important;
+} */
+
+.font-jetbrains {
+  font-family: var(--font-jetbrains), monospace;
+}
+
+.font-bebas {
+  font-family: var(--font-bebas), sans-serif;
+}
+
+.font-poppins {
+  font-family: var(--font-poppins), sans-serif;
+}
+
+/* Dynamic Colors */
+.bg-textbox-cyan {
+  background-color: theme("colors.theme_accent");
+}
+
+.bg-textbox-blue {
+  background-color: theme("colors.theme_accent");
+}
+
+.text-white {
+  color: theme("colors.text");
+}
+@media (min-width: 1024px) {
+  .theme-container {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+  }
+}
+.text-box-wrapper{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  /* border-bottom-width: 1px; */
+  &:not(.p-0){
+    padding: 1.25rem;
+  }
+  /* font-size: 1.5rem; */
+}
+.subtitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--theme-red);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.theme-btn{
+  font-family: var(--font-jetbrains);
+  text-transform: uppercase;
+  background-color: var(--theme-accent);
+  padding: 0.5rem 1.2rem;
+  height: 60px;
+  /* color: var(--theme-black); */
+}
+.star-back{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.marque-text{
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: var(--font-poppins);
+}
+.hero-section{
+  height:calc(calc(100vh - 110px) - 72px);
+}
+.bottom-nav{
+  bottom: 0;
+  transform: translateY(calc(100% - 56px));
+}
+.footer-contact{
+  label{
+    text-transform: uppercase;
+  }
+  button{
+    margin:0 !important
+  }
+}
+.fake-footer{
+  height: calc(100vh - 55px);
+}
+.body-div{
+  margin-bottom: calc(-100vh + 55px);
+}
+.height-fit-body{
+  height: calc(100vh - 110px);
+}
+.blog-card{
+  .subtitle{
+    font-family: var(--font-poppins);
+    margin-bottom: 0.5rem;
+  }
+  h3{
+    
+  }
+  h3 {
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5em; 
+    max-height: 4.5em; 
+  }
+  
+  .blog-date{
+    margin-top: auto;
+    font-size: 0.75rem;
+    text-align: end;
+  }
+}
+.work-wrapper{
+  position: relative;
+  overflow: hidden;
+  .work-name{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    opacity: 0;
+    padding: 0 50px;
+    font-size: 30px;
+    font-family: var(--font-jetbrains);
+  }
+  .flex{
+    gap: 20rem;
+  }
+   .work-showcase-wrapper{
+    /* padding-bottom: 10vh; */
+    margin-top:calc(calc(100vh - 110px) - 72px);
+    position: absolute;
+    top: 0;
+    width: 100%;
+   }
+  .work-showcase{
+    display:flex;
+    justify-content: center;
+    video,img{
+      cursor: pointer;
+      max-width: 750px;
+      max-height: 375px;
+      border: 2px solid;
+      aspect-ratio: 2/1;
+      height:auto ;
+      width:100% ;
+      object-fit: cover;
+      /* transition: scale 0.3s ease-in-out;
+      &:hover{
+        scale: 1.05;
+        transition: scale 0.3s ease-in-out;
+      } */
+    }
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.marquee__part {
+  flex-shrink: 0;
+  padding: 0px 4px;
+  font-smooth: always;
+}
+
+.marquee {
+  background: #262424;
+  color: #EEE;
+  text-transform: uppercase;
+  /* font-weight: 600;
+  font-size: 1.667vw; */
+  /* padding: 32px 0; */
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: var(--font-poppins);
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid;
+}
+
+.marquee__inner {
+  -webkit-font-smoothing: antialiased;
+    width: fit-content;
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+}
+button {
+  position: relative;
+  overflow: hidden;
+  background-color: #007bff; /* Change as needed */
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -150%;
+  width: 120%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 20%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  transform: translateY(-50%) skewX(-30deg);
+  transition: left 0.75s ease-in-out;
+}
+
+button:hover::before {
+  left: 150%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* For Safari and other browsers that don't support smooth scrolling */
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+.quote{
+  transform: translateY(-15px);
 }
