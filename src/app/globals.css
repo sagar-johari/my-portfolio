@@ -308,3 +308,9 @@ html {
 .quote{
   transform: translateY(-15px);
 }
+h1{
+  line-height: 1.2em;
+}
+.aki__line {
+  overflow: hidden;
+}
