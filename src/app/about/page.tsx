@@ -4,8 +4,8 @@ import { FaQuoteLeft,FaQuoteRight } from "react-icons/fa6";
 
 const About = () => {
   return (
-    <div className="grid grid-cols-12">
-      <div className="col-start-2 col-span-11 border-l">
+    <div className="grid grid-cols-10">
+      <div className="col-start-2 col-span-11 route-page">
         <div className="grid grid-cols-12">
           <div className="col-span-12 text-box-wrapper">
             <h2 className=" text-[170px] font-bold text-center mb-5">About Me</h2>

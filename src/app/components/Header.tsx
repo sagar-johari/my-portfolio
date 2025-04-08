@@ -5,8 +5,8 @@ export const Header = () => {
     <>
       <header className="border-b border-1 h-[55px] flex items-center sticky top-0 bg-background z-50">
         <div className="h-full w-full">
-          <div className="grid grid-cols-12 h-full ml-[2rem]">
-            <div className="col-span-8">
+          <div className="grid grid-cols-10 h-full ml-[2rem]">
+            <div className="col-span-7">
                 <div className="flex h-full items-center border-r">
               <svg
                 width="180"
@@ -26,7 +26,7 @@ export const Header = () => {
               </svg>
                 </div>
             </div>
-            <div className="col-span-4 ">
+            <div className="col-span-3 ">
                 <div className="flex h-full items-center justify-end pr-[2rem]">
             <IoIosSunny size={28} className="hover:text-yellow-300 duration-300 transition-colors cursor-pointer " />
                 </div>

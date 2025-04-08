@@ -18,8 +18,8 @@ export default function Home() {
 
   return (
     <>
-      <div className="grid grid grid-cols-12 h-[100vh - 110px] hero-section border-b">
-        <div className="col-span-8">
+      <div className="grid grid grid-cols-10 h-[100vh - 110px] hero-section border-b">
+        <div className="col-span-7">
           <div className="flex flex-col text-box-wrapper h-full relative p-0">
           {/* <StarBackground/> */}
           <video 
@@ -42,7 +42,7 @@ export default function Home() {
           </div>
           </div>
         </div>
-        <div className="col-span-4">
+        <div className="col-span-3">
           <div className="flex flex-col h-full border-l">
             {/* <div className="basis-[50%] text-box-wrapper pb-0 font-poppins text-center">
             "Let’s Build Something Amazing!"

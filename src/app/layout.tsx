@@ -5,7 +5,7 @@ import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import CursorEffect from "./components/cursorEffect";
 import { ContactForm } from "@/components/ContactForm";
-import { GoDownload } from "react-icons/go";
+import { IoMdDownload } from "react-icons/io";
 import Lottie from "lottie-react";
 import handLottie from "@/assets/hand-lottie.json";
 import LottieSection from "./components/LottieSection";
@@ -52,40 +52,40 @@ export default function RootLayout({
         <div className="ml-[2rem] border-l body-div">{children}</div>
         {/* <Footer /> */}
         <nav className="sticky bottom-nav right-0 left-0 bg-theme_accent z-10 border-t-2">
-          <ul className="ml-[2rem] text-center flex h-[55px] items-center justify-between grid grid-cols-12 font-jetBrainsMono">
+          <ul className="ml-[2rem] text-center flex h-[55px] items-center justify-between grid grid-cols-10 font-jetBrainsMono">
             <li><Link href={'/'}>Home</Link></li>
             <li><Link href={'/about'}>About</Link></li>
-            <li>Work</li>
-            <li>Blogs</li>
-            <li>Contact</li>
+            <li><Link href={'/work'}>Work</Link></li>
+            <li><Link href={'/blogs'}>Blogs</Link></li>
+            <li><Link href={'/contact'}>Contact</Link></li>
           </ul>
           <div className="bg-background fake-footer border-t-2 h-full">
-            <div className="grid grid-cols-12  border-b-2">
-              <div className="col-span-5 border-x ml-[2rem] h-[90vh] ">
-                <div className="border-b-2 p-[1rem] h-[20%] gap-x-4 flex items-center justify-center text-start">
+            <div className="grid grid-cols-10 ml-[2rem] border-b-2">
+              <div className="col-span-4 border-x h-[90vh] ">
+                <div className="border-b-2 p-[1rem] h-[20%] gap-x-4 flex items-center justify-center text-start bg-theme_accent text-white hover:bg-opacity-90 transition-all duration-200 cursor-pointer ">
                   {/* <a href="#" className="button theme-btn text-[20px]">Download Resume</a> */}
-                  <div className="flex flex-col">
-                    <h2 className="text-7xl font-bold flex items-center justify-center text-center gap-[1rem]">
+                  <div className="flex flex-col ">
+                    <h2 className="text-7xl font-bold flex  items-center justify-center text-center gap-[1rem]">
                       Download &nbsp;
                     {/* </h2>
                     <h2 className="text-5xl font-bold h-[40%] flex items-center justify-start text-start"> */}
                       Resume
-                  <LiaDownloadSolid size={50} />
+                  <IoMdDownload size={60} />
                     </h2>
                   </div>
                 </div>
                 <div className="w-full max-w-2xl mx-auto  font-jetBrainsMono footer-contact h-[80%] flex flex-col justify-between">
-                  <div className="w-[75%] mx-auto">
+                  <div className="w-[95%] mx-auto">
                   <h2 className=" mt-[4rem]  text-7xl font-bold  p-[1rem]  flex items-center justify-start text-center">
                     Newsletter
                   </h2>
-                  <p className=" px-[1rem] ">Stay updated with my latest projects, insights, and tech tips. Subscribe to my newsletter!</p>
+                  <p className=" px-[1rem] w-[70%]">Stay updated with my latest projects, insights, and tech tips. Subscribe to my newsletter!</p>
                   </div>
                   <NewsletterForm />
                 </div>
                 {/* <ContactForm /> */}
               </div>
-              <div className="col-span-7">
+              <div className="col-span-6">
                 <div className="flex flex-col h-full">
                   <div className="h-[40%] flex  items-center justify-center">
                     <div className="w-[90%] p-[2rem] h-full  border-b-2 flex flex-col justify-center items-center">
