@@ -44,9 +44,9 @@ export default function Home() {
             "Let’s Build Something Amazing!"
             </div> */}
             <div className="basis-[60%] text-box-wrapper text-[1.6rem] pb-0 ">
-              <h3 className="font-poppins">
+              <h1 className="font-poppins">
               Helping people<br/>make the world a better place<br/>through <strong>Quality Software.</strong>
-              </h3>
+              </h1>
             </div>
             <div className=" flex border-y">
               <button className=" theme-btn border-r w-full p-2 text-[1rem]">Hire me!</button>
