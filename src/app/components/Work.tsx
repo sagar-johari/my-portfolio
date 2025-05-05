@@ -2,6 +2,9 @@
 import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+//import link to be used like <Link>
+import Link from "next/link";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Work = () => {
@@ -101,10 +104,12 @@ const Work = () => {
             <div className="work-showcase-wrapper h-[400vh]">
               <div className="flex flex-col h-full justify-between">
                 <div className="work-showcase" data-project="MDMD">
+                  <Link href={'/mdmd'}>
                   <video width="640" height="360" autoPlay loop muted playsInline>
                     <source src="/works/2.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
+                  </Link>
                 </div>
                 <div className="work-showcase" data-project="Hot Buttered">
                   <img src="/works/6.png" alt="hotbuttered"/>

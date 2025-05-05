@@ -15,6 +15,7 @@ import illuminati from "@/assets/actual-ill.svg";
 import Image from "next/image";
 import { NewsletterForm } from "./components/Newsletter";
 import Link from "next/link";
+import DynamicListings from "./components/DynamicListings";
 
 const jetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -34,7 +35,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Sagar Johari Portfolio",
   description:
-    "I’m Sagar Johari, a Frontend Developer specializing in React, GSAP animations, and Headless CMS solutions. I create high-performance websites that blend functionality with stunning visuals.",
+    "I'm Sagar Johari, a Frontend Developer specializing in React, GSAP animations, and Headless CMS solutions. I create high-performance websites that blend functionality with stunning visuals.",
 };
 
 export default function RootLayout({
@@ -49,7 +50,12 @@ export default function RootLayout({
       >
         {/* <CursorEffect />  */}
         <Header />
-        <div className="ml-[2rem] border-l body-div">{children}</div>
+        <div className="ml-[2rem] grid grid-cols-10 grid-rows-1 body-div">
+          <div className="groot">
+            <DynamicListings />
+          </div>
+          {children}
+        </div>
         {/* <Footer /> */}
         <nav className="sticky bottom-nav right-0 left-0 bg-theme_accent z-10 border-t-2">
           <ul className="ml-[2rem] text-center flex h-[55px] items-center justify-between grid grid-cols-10 font-jetBrainsMono">
@@ -76,7 +82,7 @@ export default function RootLayout({
                 </div>
                 <div className="w-full max-w-2xl mx-auto  font-jetBrainsMono footer-contact h-[80%] flex flex-col justify-between">
                   <div className="w-[95%] mx-auto">
-                  <h2 className=" mt-[4rem]  text-7xl font-bold  p-[1rem]  flex items-center justify-start text-center">
+                  <h2 className=" mt-[1rem]  text-7xl font-bold  p-[1rem]  flex items-center justify-start text-center">
                     Newsletter
                   </h2>
                   <p className=" px-[1rem] w-[70%]">Stay updated with my latest projects, insights, and tech tips. Subscribe to my newsletter!</p>

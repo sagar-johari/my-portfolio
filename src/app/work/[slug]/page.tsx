@@ -1,16 +1,13 @@
 "use client";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa6";
 import { useGSAP } from '@/app/js/custom-gsap';
-import { div } from "framer-motion/client";
 
 const Work = () => {
   useGSAP();
 
   return (
-    <div className="col-start-3 col-span-8 page-div fadecustom">
-
-    <div className="grid grid-cols-10 work page-wrapper">
-      <div className="col-span-10 route-page">
+    <div className="grid grid-cols-10">
+      <div className="col-start-3 col-span-10 route-page">
         <div className="grid grid-cols-12">
           <div className="col-span-12 text-box-wrapper">
             <h2 className="text-[170px] font-bold text-center mb-5">My Work</h2>
@@ -27,7 +24,6 @@ const Work = () => {
           </div>
         </div>
       </div>
-    </div>
     </div>
   );
 };

@@ -18,15 +18,19 @@ export default function Home() {
 
   return (
     <>
+    <div className="col-span-10 page-div home">
+
+    <div className="route-page">
+
       <div className="grid grid grid-cols-10 h-[100vh - 110px] hero-section border-b">
         <div className="col-span-7">
-          <div className="flex flex-col text-box-wrapper h-full relative p-0">
+          <div className="flex flex-col text-box-wrapper h-full relative p-0 overflow-hidden">
           {/* <StarBackground/> */}
           <video 
           loop
           autoPlay
           muted
-          className="object-cover h-full w-full absolute top-0 left-0"
+          className="object-cover h-full w-full absolute top-0 left-0 fadecustom"
           >
             <source src="../videos/banner_video.mp4" type="" />
           </video>
@@ -47,26 +51,27 @@ export default function Home() {
             {/* <div className="basis-[50%] text-box-wrapper pb-0 font-poppins text-center">
             "Let’s Build Something Amazing!"
             </div> */}
-            <div className="basis-[60%] text-box-wrapper text-[1.6rem] pb-0 ">
+            <div className="basis-[40%] text-box-wrapper text-[1.6rem] pb-0 fadecustom ">
               <h1 className="font-poppins">
-              Helping people<br/>make the world a better place<br/>through <strong>Quality Software.</strong>
+              Helping people<br/>make the world a better place<br/> through <strong>Quality Software.</strong>
               </h1>
             </div>
-            <div className=" flex border-y">
+            <div className=" flex border-y ">
               <button className=" theme-btn border-r w-full p-2 text-[1rem]">Hire me!</button>
               <button className=" theme-btn w-full p-2 text-[1rem]">View my work</button>
             </div>
-            <div className="basis-[40%] text-box-wrapper justify-start blog-card">
+            <div className="basis-[40%] text-box-wrapper justify-start blog-card fadecustom">
             <span className="subtitle">Blogs</span>
               <div className="flex flex-col h-full">
-              <h3 className="text-[1rem] m-auto">Lorem ipsum is a dummy or placeholder text comm used in graphic design, publishinggraphic design, publishinggraphic design, publishinggraphic design, publishing.</h3>
+              <h3 className="text-[1.2rem] m-auto">Lorem ipsum is a dummy or placeholder text comm used in graphic design Lorem ipsum is a dummy or placeholder text comm used in graphic design.</h3>
               <span className="blog-date ">12 feb 2001</span>
               </div>
             </div>
-              <button className=" theme-btn border-t w-full p-2 text-[1rem]">view all</button>
+              <button className=" theme-btn border-t w-full p-2 text-[1rem] ">view all</button>
           </div>
         </div>
       </div>
+      <div className="marque-wrapper">
       <Marquee className="marque-text border-b" speed={50}>
       {[...Array(3)].map((_, index) => (
           <div className="marquee__part flex items-center" key={index}>
@@ -80,8 +85,11 @@ export default function Home() {
           </div>
         ))}
   </Marquee>
+      </div>
   {/* <MarqueeCustom/>   */}
   <Work/>
+    </div>
+    </div>
     </>
   );
 }
